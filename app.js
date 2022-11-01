@@ -37,7 +37,7 @@ app.post('/', function(req, res){
    const url = 'https://us8.api.mailchimp.com/3.0/lists/f5111711f8'
    const option = {
     method: 'POST',
-    auth: 'gal1leo:b9e6ad9a191d16f70dc39a8b294a6105-us8'
+    auth: process.env.AUTH
    }
 
    const request  = https.request(url, option, function(response){
@@ -64,8 +64,3 @@ app.listen(process.env.PORT || 3000, function(){
     console.log('server running on port 3000.')
 })
 
-// API KEY
-// b9e6ad9a191d16f70dc39a8b294a6105-us8
-// b9e6ad9a191d16f70dc39a8b294a6105-us8
-// AUDIENCE ID
-// f5111711f8
